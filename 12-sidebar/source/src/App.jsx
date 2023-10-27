@@ -1,4 +1,15 @@
+import React from "react";
+import Home from "./Home";
+import Modal from "./Modal";
+import Sidebar from "./Sidebar";
+
 const App = () => {
-  return <h2>Sidebar Starter</h2>;
+  return (
+    <React.Fragment>
+      <Home />
+      <Modal />
+      <Sidebar />
+    </React.Fragment>
+  );
 };
 export default App;
