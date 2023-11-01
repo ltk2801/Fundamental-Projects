@@ -66,8 +66,8 @@ html {
 
 body {
   background: var(--backgroundColor);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
@@ -257,12 +257,14 @@ ul {
 PROJECT CSS 
 =============== 
 */
+
 body {
   background: var(--primary-500);
 }
+
 /* 
 ============= 
-Navbar
+Navbar  
 =============== 
 */
 
@@ -279,6 +281,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   text-transform: none;
   color: var(--white);
@@ -289,25 +292,29 @@ nav {
   width: 2rem;
   height: 2rem;
   background: var(--white);
-  color: var(--primary-700);
+  color: var(--primary-900);
   border-radius: var(--borderRadius);
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
 }
+
 .toggle-btn:hover {
   transform: scale(1.05);
 }
+
 /* 
 ============= 
-Hero
+Hero  
 =============== 
 */
+
 .hero-container {
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
 }
+
 .hero-center {
   color: var(--white);
   width: var(--fluid-width);
@@ -320,6 +327,7 @@ Hero
   font-weight: 700;
   line-height: 1.25;
 }
+
 .hero-center p {
   line-height: 1.5;
 }
@@ -339,10 +347,9 @@ Hero
 
 /* 
 ============= 
-Sidebar
+Sidebar  
 =============== 
 */
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -354,6 +361,7 @@ Sidebar
   opacity: 0;
   visibility: hidden;
 }
+
 .show-sidebar {
   opacity: 1;
   visibility: visible;
@@ -361,7 +369,6 @@ Sidebar
   transition-duration: 1s;
 }
 /* toggle class */
-
 .sidebar-container {
   padding: 4rem 2rem;
   position: relative;
@@ -377,9 +384,15 @@ Sidebar
   right: 1rem;
   cursor: pointer;
 }
+.close-btn:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
+}
+
 .sidebar article {
   margin-bottom: 2rem;
 }
+
 .sidebar h4 {
   margin-bottom: 1rem;
   color: var(--primary-700);
@@ -397,11 +410,25 @@ Sidebar
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
+
+.sidebar-sublinks a:hover {
+  color: var(--primary-600);
+  transition: var(--transition);
+  transform: scale(1.01);
+}
+
+.sidebar-sublinks a:hover svg {
+  color: var(--primary-600);
+  transition: var(--transition);
+  transform: scale(1.01);
+}
+
 .sidebar-sublinks svg {
   color: var(--grey-500);
 }
+
 @media screen and (min-width: 992px) {
   .sidebar {
     display: none;
@@ -410,22 +437,25 @@ Sidebar
 
 /* 
 ============= 
-Nav Links
+Nav link  
 =============== 
 */
+
 .nav-links {
   display: none;
 }
+
 @media screen and (min-width: 992px) {
   .nav-links {
     display: flex;
+    align-items: center;
     justify-content: center;
-
+    gap: 1rem;
     align-self: stretch;
   }
   .nav-center {
-    align-self: stretch;
     display: grid;
+    align-self: stretch;
     grid-template-columns: auto 1fr;
   }
   .nav-link {
@@ -437,27 +467,31 @@ Nav Links
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
+    align-self: stretch;
   }
 }
 
 /* 
 ============= 
-Submenu
+Submenu 
 =============== 
 */
+
 .submenu {
   display: none;
 }
+
 @media screen and (min-width: 992px) {
   .submenu {
     display: block;
     position: fixed;
-    top: 7rem;
+    top: 6rem;
     left: 50%;
     width: var(--fluid-width);
     max-width: var(--max-width);
     background: var(--white);
     padding: 2rem;
+    /* transform: translateX(-50%); */
     transform: rotateX(-90deg) translateX(-50%);
     transform-origin: top;
     perspective: 1000px;
@@ -471,15 +505,15 @@ Submenu
     visibility: visible;
     opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
-    z-index: 10;
+    z-index: 1;
   }
   .submenu h5 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--primary-700);
   }
   .submenu-links {
     display: grid;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
   }
   .submenu-links a {
     display: block;
@@ -491,5 +525,16 @@ Submenu
   }
   .submenu-links svg {
     color: var(--grey-500);
+  }
+  .submenu-links a:hover {
+    color: var(--primary-600);
+    transition: var(--transition);
+    transform: scale(1.01);
+  }
+
+  .submenu-links a:hover svg {
+    color: var(--primary-500);
+    transition: var(--transition);
+    transform: scale(1.01);
   }
 }
